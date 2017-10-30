@@ -53,6 +53,7 @@ if __name__=="__main__":
     root.right = Node(15)
     root.left.left = Node(2)
     root.left.right = Node(3)
+    assert get_nth_row_bfs(root, 0) == [] == get_nth_row_dfs(root, 0)
     assert get_nth_row_bfs(root, 1) == [10] == get_nth_row_dfs(root, 1)
     assert get_nth_row_bfs(root, 2) == [5,15] == get_nth_row_dfs(root, 2)
     assert get_nth_row_bfs(root, 3) == [2,3] == get_nth_row_dfs(root, 3)
