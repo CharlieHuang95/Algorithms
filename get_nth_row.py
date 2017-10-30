@@ -1,5 +1,20 @@
 # Get Nth row of binary tree
 
+# This problem can be solved using bfs and dfs. To use bfs, we keep track
+# of how many nodes there are at every subsequent level. We only add valid
+# nodes to the queue, and maintain a counter to know when the current level
+# is traversed. To use dfs, we pass the current depth on each recursive node
+# and we only add to a global solution variable if the current depth is
+# the desired depth n.
+
+# Assuming that the binary tree is balanced, the runtime for both is O(N)
+# because we traverse each node only once. The memory complexity is O(N)
+# for bfs because the final row could potentially be half of the entire tree,
+# meaning that we have to store a number of nodes comparable to the size of
+# the tree within our queue. The memory complexity of dfs is O(logN) because
+# the stack only needs to be as deep as the longest path from root to leaf,
+# which is logN for a balanced tree.
+
 import collections
 
 class Node(object):
