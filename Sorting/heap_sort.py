@@ -1,3 +1,12 @@
+# Heap-sort works by adding all elements to a (min) heap, and iteratively
+# popping the smallest elements onto a sorted array
+
+# Has O(nlogn) runtime. This algorithm can be effective when we only require
+# a fraction of the sorted array. For example, it can obtain the smallest
+# m/n elements in O(n+mlogn) time, an improvement to the O(nlogn) normally
+# required to fully sort an array. This is achieved because the creation of
+# a heap is O(n), and only m elements need to be popped from the heap.
+
 import heapq
 import random
 

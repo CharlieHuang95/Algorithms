@@ -1,3 +1,10 @@
+# Merge sort works by recursively breaking down the array into smaller chunks
+# (subproblems) until a subproblem consists of sorting individual elements.
+# This is the base case. Since it is considered sorted, it will return.
+# The solutions to the subproblems are then combined with a helper routine
+# (merge) which merges two sorted arrays together. This can be run in O(n)
+# time with a simple two-pointer approach.
+
 import random
 
 def merge(left, right):
